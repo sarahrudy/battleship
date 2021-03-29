@@ -111,6 +111,7 @@ We will explore using GitHub projects. At surface level, it looks like it will b
 - DTR 
 - Review "Battleship - Overview"
 - Get some files and classes set up 
+- Set up rep.l
 - Write out general plan of attack
 - 
 
