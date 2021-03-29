@@ -3,10 +3,10 @@ Group Project
 
 #DTR: Define the Relationship#
 
-**What are each of our learning goals for this project? What drives us in this project?**. 
+**What are each of our learning goals for this project? What drives us in this project?**<br/>
 To create an interactive game that includes tests along with a class file with methods that support them. We're driven by an eagerness to learn.
 
-**What is your collaboration style? How do you feel about pair programming vs. divide-and-conquer approaches?**. 
+**What is your collaboration style? How do you feel about pair programming vs. divide-and-conquer approaches?**<br/>
 Our collaboration style is ping-pong style. We'll both contribute in equal parts. Pair programming will allow us to have a better comprehension of our program and the inner workings of it. We are anti divide-and-conquer approach.
 
 **How do you communicate best? How do you appreciate receiving communication from others?**
