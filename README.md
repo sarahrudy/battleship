@@ -1,5 +1,3 @@
-# Battleship
-Group Project
 
 ## **DTR: Define the Relationship**
 
