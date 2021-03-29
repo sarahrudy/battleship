@@ -86,24 +86,34 @@ We will use our strengths to overcome obstacles by knowing our strengths well an
 Fortunately, we are both committed to keeping our schedules open and we have limited outside commitments. 
 
 **Communication Expectations (How and often will we communicate? How do we keep lines of communication open? How will we make decisions as a team? How will we communicate about our emotional and mental well-being with each other?):**
-
+REVISIT
 
 **Abilities & Growth Expectations (Technical strengths and areas for desired improvement):**
 Being able to iterate over all files we create, call on methods within those files, understand the full scope, working through the interaction phase of the project. 
 
 **Workload Expectations (What features do we each want to work on?):**
-
+REVISIT
 
 **Workflow Expectations (Git workflow/Tools/Code Review/Reviewing Pull Requests/Debugging and Problem-solving Techniques):**
+We'll both need practice with creating and reviewing pull requests in a collaboration project. 
 
 **Pomodoro Break Schedule:**
+45 min/ 5 min 
 
 **Expectations for giving and receiving feedback:**
+Being honest, open, and kind and receiving constructive criticism as a means for learning.
 
 **Additional Remote Considerations:**
+None.
 
 **Project management tools we will use (GitHub projects or Trello are popular tools):**
+We will explore using GitHub projects. At surface level, it looks like it will be a good tool to keep us organized and on track. 
 
 **Day 1 Agenda:**
+- DTR 
+- Review "Battleship - Overview"
+- Get some files and classes set up 
+- Write out general plan of attack
+- 
 
 **Additional Notes:**
