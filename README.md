@@ -1,7 +1,7 @@
 # Battleship
 Group Project
 
-#**DTR: Define the Relationship**#
+#**DTR: Define the Relationship**
 
 **What are each of our learning goals for this project? What drives us in this project?**<br/>
 To create an interactive game that includes tests along with a class file with methods that support them. We're driven by an eagerness to learn.
