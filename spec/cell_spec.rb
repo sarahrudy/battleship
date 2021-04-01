@@ -47,4 +47,6 @@ describe Cell do
     expect(cell.ship.health).to eq(2)
     expect(cell.fired_upon?).to eq(true)
   end
+
+  
 end

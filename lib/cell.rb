@@ -16,7 +16,7 @@ class Cell
   # because every cell will have a state of true/false so it makes sense to have an attribute
 
   def empty?
-    @ship.nil?
+    @ship == nil
     #built in ruby method (is ship empty?)
   end
 
