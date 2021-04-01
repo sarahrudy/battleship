@@ -5,28 +5,35 @@ require './lib/cell'
 describe Cell do
   it 'exists' do
     cell = Cell.new("B4")
+    @cruiser = Ship.new("Cruiser", 3)
 
     expect(cell).to be_instance_of(Cell)
   end
 
-  it 'has a coordinate' do
+  it 'has attributes' do
     cell = Cell.new("B4")
+    @cruiser = Ship.new("Cruiser", 3)
 
     expect(cell.coordinate).to eq("B4")
-  end
-
-  it 'has a ship' do
-    cell = Cell.new("B4")
-
     expect(cell.ship).to eq(nil)
-  end
-
-  it 'has an empty cell' do
-    cell = Cell.new("B4")
-
     expect(cell.empty?).to eq(true)
-
+    expect(cell.fired_upon?).to eq(false)
   end
+
+  # it 'has a ship' do
+  #   cell = Cell.new("B4")
+  #   @cruiser = Ship.new("Cruiser", 3)
+  #
+  #   expect(cell.ship).to eq(nil)
+  # end
+  #
+  # it 'has an empty cell' do
+  #   cell = Cell.new("B4")
+  #   @cruiser = Ship.new("Cruiser", 3)
+  #
+  #   expect(cell.empty?).to eq(true)
+  #
+  # end
 
   it 'places a ship' do
     cell = Cell.new("B4")
@@ -47,6 +54,4 @@ describe Cell do
     expect(cell.ship.health).to eq(2)
     expect(cell.fired_upon?).to eq(true)
   end
-
-  
 end
