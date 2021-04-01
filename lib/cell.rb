@@ -35,6 +35,19 @@ class Cell
     @fired_upon = true
   end
 
+  def render
+    if @ship == nil
+      return "."
+      if @fired_upon
+        return "M"
+      end
+    end
+   #if cell is empty, return "."
+    #if cell has been fired upon but has no ship, return "M"
+    #if cell has been fired upon and has a ship, return "H"
+    #if cell has been fired upon and has a ship that is now sunk, return "X"
+    #if cell has a ship, return "S"
+  end
   # one more method!
 
 end

@@ -15,25 +15,21 @@ describe Cell do
     @cruiser = Ship.new("Cruiser", 3)
 
     expect(cell.coordinate).to eq("B4")
-    expect(cell.ship).to eq(nil)
-    expect(cell.empty?).to eq(true)
-    expect(cell.fired_upon?).to eq(false)
   end
 
-  # it 'has a ship' do
-  #   cell = Cell.new("B4")
-  #   @cruiser = Ship.new("Cruiser", 3)
-  #
-  #   expect(cell.ship).to eq(nil)
-  # end
-  #
-  # it 'has an empty cell' do
-  #   cell = Cell.new("B4")
-  #   @cruiser = Ship.new("Cruiser", 3)
-  #
-  #   expect(cell.empty?).to eq(true)
-  #
-  # end
+  it 'has a ship' do
+    cell = Cell.new("B4")
+    @cruiser = Ship.new("Cruiser", 3)
+
+    expect(cell.ship).to eq(nil)
+  end
+
+  it 'has an empty cell' do
+    cell = Cell.new("B4")
+    @cruiser = Ship.new("Cruiser", 3)
+
+    expect(cell.empty?).to eq(true)
+  end
 
   it 'places a ship' do
     cell = Cell.new("B4")
@@ -53,5 +49,13 @@ describe Cell do
     cell.fire_upon
     expect(cell.ship.health).to eq(2)
     expect(cell.fired_upon?).to eq(true)
+  end
+
+  it 'knows if it has been fired upon' do
+    cell_1 = Cell.new("B4")
+
+    expect(cell_1.render).to eq(".")
+    cell_1.fire_upon
+    expect(cell_1.render).to eq("M")
   end
 end
