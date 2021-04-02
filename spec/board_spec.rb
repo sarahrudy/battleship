@@ -14,6 +14,6 @@ describe Board do
   it 'has cells' do
     board = Board.new
 
-    expect(board.cells).to eq(build_initial_cells)
+    expect(board.cells).to eq(generate_cells)
   end
 end
