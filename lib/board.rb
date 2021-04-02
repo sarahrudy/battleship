@@ -1,10 +1,15 @@
 
 class Board
   attr_reader :cells, :rows, :columns
-  def initialize(rows = 4, columns = 4)
+  def initialize(rows, columns)
     @rows    = rows #create array of rows [A..D]
     @columns = columns #create array of columns [1..4]
     @cells   = {}
+  end
+
+  #want to have a method that returns the proper amount of cells (16)
+  def cells
+    @columns * @rows
   end
 end
 
