@@ -1,20 +1,24 @@
 
 class Board
-  attr_reader :cells
+  attr_reader :cells, :rows, :columns
   def initialize(rows = 4, columns = 4)
     @rows    = rows
     @columns = columns
-    @cells   = generate_cells
+    @cells   = {}
   end
-  def generate_cells
-   # this is probably some nested iteration of some sort
-    stuff.each do |x|
-      x = Cell.new(arg1, arg1) # ????? not sure what a cell is yet
-      ...
-     end
-   end
- ...
 end
+
+
+
+#   def generate_cells
+#    # this is probably some nested iteration of some sort
+#     stuff.each do |x|
+#       x = Cell.new(arg1, arg1) # ????? not sure what a cell is yet
+#       ...
+#      end
+#    end
+#  ...
+# end
 
 # def build_initial_cells
 #   @cells = {
