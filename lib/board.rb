@@ -2,8 +2,8 @@
 class Board
   attr_reader :cells, :rows, :columns
   def initialize(rows = 4, columns = 4)
-    @rows    = rows #create array of rows [A..D]
-    @columns = columns #create array of columns [1..4]
+    @rows    = [] #create array of rows [A..D]
+    @columns = [] #create array of columns [1..4]
     @cells   = {}
   end
 end
@@ -39,4 +39,10 @@ end
 #       :D3 => cell_15,
 #       :D4 => cell_16
 #   }
+# end
+# 
+# def valid_placement?(ship, coords)
+#   player_input_valid?(ship, coords) &&
+#   (is_horizontal?(ship, coords) ||
+#   is_vertical?(ship, coords))
 # end
