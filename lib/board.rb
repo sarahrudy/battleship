@@ -2,8 +2,8 @@
 class Board
   attr_reader :cells, :rows, :columns
   def initialize(rows = 4, columns = 4)
-    @rows    = rows
-    @columns = columns
+    @rows    = rows #create array of rows [A..D]
+    @columns = columns #create array of columns [1..4]
     @cells   = {}
   end
 end
