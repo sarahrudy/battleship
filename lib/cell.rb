@@ -18,7 +18,7 @@ class Cell
     @ship = ship_object
   end
 
-  def fired_upon? 
+  def fired_upon?
     @fired_upon
     # empty, miss, hit, sunk
     # check to see if it changed
