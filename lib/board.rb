@@ -48,20 +48,28 @@ class Board
     range = numbers[0]..numbers[-1]
     numbers_check = numbers == range.to_a
       # will fill a range of multiple numbers in a consecutive array
-    # require "pry"; binding.pry
-    # second_coordinate = numbers.each_cons
     letters_check && numbers_check
   end
-  # class end
 
-  
+  def is_vertical?(ship, coordinates)
+    numbers = coordinates.map do |coordinate|
+      coordinate[1]
+    end
+    numbers_check = numbers.uniq.length == 1
+    letters = coordinates.map do |coordinate|
+      coordinate[0]
+    end
+    range = letters[0]..letters[-1]
+    letters_check = letters == range.to_a
+    letters_check && numbers_check
+  end
 end
 
 
-  #
-  # def is_vertical?(ship, coords)
-  #
-  #   end
+
+
+
+
 
 
     # @rows.each do |row|

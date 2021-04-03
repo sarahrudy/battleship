@@ -50,15 +50,6 @@ describe Board do
     expect(board.correct_length?(submarine, ["A1", "A2"])).to eq(true)
   end
 
-  xit 'placement has consecutive cells' do
-    board = Board.new
-    cruiser = Ship.new("Cruiser", 3)
-    submarine = Ship.new("Submarine", 2)
-
-    expect(board.consecutive?(submarine, ["A1", "B1"])).to eq(true)
-    expect(board.consecutive?(cruiser, ["A1", "A2", "A4"])).to eq(false)
-  end
-
   it 'is horizontal' do
     board = Board.new
     cruiser = Ship.new("Cruiser", 3)
@@ -77,13 +68,13 @@ describe Board do
     expect(board.is_vertical?(cruiser, ["A1", "A2", "A3"])).to eq(false)
   end
 
-  xit 'has consecutive coordinates' do
+  it 'has consecutive coordinates' do
     board = Board.new
     cruiser = Ship.new("Cruiser", 3)
     submarine = Ship.new("Submarine", 2)
 
     expect(board.valid_placement?(cruiser, ["A1", "A2", "A4"])).to eq(false)
-    expect(board.valid_placement?(submarine, ["A1", "C1"])).to eq(false)
+    expect(board.valid_placement?(submarine, ["A1","C1"])).to eq(false)
     expect(board.valid_placement?(cruiser, ["A3", "A2", "A1"])).to eq(false)
     expect(board.valid_placement?(submarine, ["C1", "B1"])).to eq(false)
   end
