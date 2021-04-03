@@ -3,6 +3,8 @@ class Board
   attr_reader :cells
 
   def initialize
+    @columns = 1..4
+    @rows = "A".."D"
     @cells = {
         "A1" => Cell.new("A1"),
         "A2" => Cell.new("A2"),
@@ -19,20 +21,27 @@ class Board
         "D1" => Cell.new("D1"),
         "D2" => Cell.new("D2"),
         "D3" => Cell.new("D3"),
-        "D4" => Cell.new("D4")
+        "D4" => Cell.new("D4"),
     }
-
   end
 
   def valid_coordinate?(coordinate)
     @cells[coordinate] != nil
   end
 
-  def valid_placement?(ship, coordinates)
+  def correct_length?(ship, coordinates)
     coordinates.length == ship.length
   end
 
+  def consecutive?(ship, coordinates)
+    
+
+  end
 end
+
+
+
+
 
 
 
