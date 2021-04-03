@@ -23,6 +23,19 @@ class Board
     }
   end
 
+  # def (need a cell method??)
+
+  def valid_coordinate?(cells)
+    if @cells
+      true
+    else
+      false
+    end
+
+    # return true if board.valid_coordinate == cells[0..15]
+    # false
+  end
+end
   #want to have a method that returns the proper amount of cells (16)
 
 
