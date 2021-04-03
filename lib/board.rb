@@ -31,6 +31,7 @@ class Board
   def correct_length?(ship, coordinates)
     coordinates.length == ship.length
   end
+  
 end
 
 

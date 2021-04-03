@@ -15,9 +15,9 @@ describe Board do
     board = Board.new
 
     new_cells = ["A1","A2","A3","A4",
-                "B1", "B2","B3","B4",
-                "C1", "C2","C3","C4",
-                "D1", "D2","D3","D4"]
+                 "B1","B2","B3","B4",
+                 "C1","C2","C3","C4",
+                 "D1","D2","D3","D4"]
 
     expect(board.cells["A1"]).to be_instance_of(Cell)
     expect(board.cells.keys).to eq(new_cells)
@@ -44,5 +44,5 @@ describe Board do
 end
 
 
- # the board can hold a cell
- # the board can hold many cells
+
+ 
