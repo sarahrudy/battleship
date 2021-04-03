@@ -46,8 +46,6 @@ describe Board do
 
     expect(board.correct_length?(cruiser, ["A1", "A2"])).to eq(false)
     expect(board.correct_length?(submarine, ["A2", "A3", "A4"])).to eq(false)
-
-
     expect(board.correct_length?(cruiser, ["B1", "C1", "D1"])).to eq(true)
     expect(board.correct_length?(submarine, ["A1", "A2"])).to eq(true)
   end
@@ -70,12 +68,13 @@ describe Board do
     expect(board.is_horizontal?(cruiser, ["A1", "B1", "C1"])).to eq(false)
   end
 
-  xit 'is vertical' do
+  it 'is vertical' do
     board = Board.new
     cruiser = Ship.new("Cruiser", 3)
     submarine = Ship.new("Submarine", 2)
 
-
+    expect(board.is_vertical?(submarine, ["A1", "B1"])).to eq(true)
+    expect(board.is_vertical?(cruiser, ["A1", "A2", "A3"])).to eq(false)
   end
 
   xit 'has consecutive coordinates' do

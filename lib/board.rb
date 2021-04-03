@@ -53,7 +53,10 @@ class Board
     letters_check && numbers_check
   end
   # class end
+
+  
 end
+
 
   #
   # def is_vertical?(ship, coords)
