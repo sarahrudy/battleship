@@ -22,7 +22,8 @@ class Board
         "D4" => Cell.new("D4"),
     }
   end
-end
+
+  #want to have a method that returns the proper amount of cells (16)
 
 
 # from Mike's slack message to group
