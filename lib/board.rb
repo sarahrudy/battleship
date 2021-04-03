@@ -47,7 +47,6 @@ class Board
     end
     range = numbers[0]..numbers[-1]
     numbers_check = numbers == range.to_a
-
       # will fill a range of multiple numbers in a consecutive array
     # require "pry"; binding.pry
     # second_coordinate = numbers.each_cons

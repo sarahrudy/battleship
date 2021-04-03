@@ -39,8 +39,6 @@ describe Board do
   end
 
 
-
-
   it 'ship has same length as coordinates' do
     board = Board.new
     cruiser = Ship.new("Cruiser", 3)
