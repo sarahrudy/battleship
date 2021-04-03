@@ -54,6 +54,7 @@ describe Board do
     expect(board.valid_placement?(submarine, ["C1", "B1"])).to eq(false)
   end
 
+
   # xit 'cannot be diagonal' do
   #   board = Board.new
   #   cruiser = Ship.new("Cruiser", 3)

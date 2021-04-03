@@ -34,6 +34,7 @@ class Board
     coordinates.length == ship.length
   end
 
+
 end
 
 
