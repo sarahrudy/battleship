@@ -21,20 +21,18 @@ class Board
         "D3" => Cell.new("D3"),
         "D4" => Cell.new("D4"),
     }
+
   end
 
   # def (need a cell method??)
 
-  def valid_coordinate?(cells)
-    if @cells
-      true
-    else
-      false
-    end
+  # def valid_coordinate?(coordinate)
+
+
 
     # return true if board.valid_coordinate == cells[0..15]
     # false
-  end
+
 end
   #want to have a method that returns the proper amount of cells (16)
 

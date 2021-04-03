@@ -11,13 +11,19 @@ describe Board do
     expect(board).to be_instance_of(Board)
   end
 
-  xit 'has cells' do
+  it 'has cells' do
     board = Board.new
 
-    expect(board.cells).to eq(cells)
+    new_cells = ["A1","A2","A3","A4",
+                "B1", "B2","B3","B4",
+                "C1", "C2","C3","C4",
+                "D1", "D2","D3","D4"]
+
+    expect(board.cells["A1"]).to be_instance_of(Cell)
+    expect(board.cells.keys).to eq(new_cells)
   end
 
-  it 'has valid coordinates' do
+  xit 'has valid coordinates' do
     board = Board.new
 
     expect(board.valid_coordinate?("A1")).to eq(true)
