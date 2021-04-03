@@ -27,8 +27,12 @@ class Board
   def valid_coordinate?(coordinate)
     @cells[coordinate] != nil
   end
+
+  def correct_length?(ship, coordinates)
+    coordinates.length == ship.length
+  end
 end
-  #want to have a method that returns the proper amount of cells (16)
+
 
 
 # from Mike's slack message to group
