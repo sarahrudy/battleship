@@ -3,9 +3,8 @@ class Board
   attr_reader :cells
 
   def initialize
-    @columns = 1..4
+    @columns = 1..4 # range class
     @rows = "A".."D"
-
     @cells = {
         "A1" => Cell.new("A1"),
         "A2" => Cell.new("A2"),
@@ -33,13 +32,43 @@ class Board
   def correct_length?(ship, coordinates)
     coordinates.length == ship.length
   end
-    
+
+  # def consecutive?(ship, coordinate)
+  #
+  def is_horizontal?(ship, coordinates)
+    letters = coordinates.map do |coordinate|
+      coordinate[0]
+    end
+    letters_check = letters.uniq.length == 1
+
+    # size of ship will change
+    numbers = coordinates.map do |coordinate|
+      coordinate[1]
+    end
+    range = numbers[0]..numbers[-1]
+    numbers_check = numbers == range.to_a
+      # will fill a range of multiple numbers in a consecutive array
+    # require "pry"; binding.pry
+    # second_coordinate = numbers.each_cons
+    letters_check && numbers_check
+  end
+  # class end
 end
 
+  #
+  # def is_vertical?(ship, coords)
+  #
+  #   end
 
 
+    # @rows.each do |row|
+    #   @columns.each do |column|
+    #
+    #     range.each_cons(2) do
 
-
+# def valid_placement?(ship, coords)
+#
+# def player_input_valid?(ship, coords)
 
 
 # from Mike's slack message to group
