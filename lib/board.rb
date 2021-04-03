@@ -1,6 +1,7 @@
 
 class Board
-  attr_reader :cells
+  attr_reader :cells,
+              :test
 
   def initialize
     @cells = {
