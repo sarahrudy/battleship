@@ -5,6 +5,7 @@ class Board
   def initialize
     @columns = 1..4
     @rows = "A".."D"
+
     @cells = {
         "A1" => Cell.new("A1"),
         "A2" => Cell.new("A2"),
@@ -32,11 +33,7 @@ class Board
   def correct_length?(ship, coordinates)
     coordinates.length == ship.length
   end
-
-  def consecutive?(ship, coordinates)
     
-
-  end
 end
 
 

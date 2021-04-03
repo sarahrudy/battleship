@@ -40,6 +40,8 @@ describe Board do
 
     expect(board.correct_length?(cruiser, ["A1", "A2"])).to eq(false)
     expect(board.correct_length?(submarine, ["A2", "A3", "A4"])).to eq(false)
+
+
     expect(board.correct_length?(cruiser, ["B1", "C1", "D1"])).to eq(true)
     expect(board.correct_length?(submarine, ["A1", "A2"])).to eq(true)
   end
@@ -51,5 +53,37 @@ describe Board do
 
     expect(board.consecutive?(submarine, ["A1", "B1"])).to eq(true)
     expect(board.consecutive?(cruiser, ["A1", "A2", "A4"])).to eq(false)
+
   end
+
+
+  it 'has consecutive coordinates' do
+    board = Board.new
+    cruiser = Ship.new("Cruiser", 3)
+    submarine = Ship.new("Submarine", 2)
+
+    expect(board.valid_placement?(cruiser, ["A1", "A2", "A4"])).to eq(false)
+    expect(board.valid_placement?(submarine, ["A1", "C1"])).to eq(false)
+    expect(board.valid_placement?(cruiser, ["A3", "A2", "A1"])).to eq(false)
+    expect(board.valid_placement?(submarine, ["C1", "B1"])).to eq(false)
+  end
+
+
+  # xit 'cannot be diagonal' do
+  #   board = Board.new
+  #   cruiser = Ship.new("Cruiser", 3)
+  #   submarine = Ship.new("Submarine", 2)
+  #
+  #   expect(board.valid_placement?(cruiser, ["A1", "B2", "C3"])).to eq(false)
+  #   expect(board.valid_placement?(submarine, ["C2", "D3"])).to eq(false)
+  # end
+
+  # xit 'is valid placement if all previous checks pass' do
+  #   board = Board.new
+  #   cruiser = Ship.new("Cruiser", 3)
+  #   submarine = Ship.new("Submarine", 2)
+  #
+  #   expect(board.correct_length?(submarine, ["A1", "A2"])).to eq(true)
+  #   expect(board.correct_length?(cruiser, ["B1", "C1", "D1"])).to eq(true)
+  # end
 end
