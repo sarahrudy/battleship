@@ -14,10 +14,9 @@ describe Board do
   it 'has rows and columns' do
     board = Board.new
 
-    expect(board.rows).to eq(4)
-    expect(board.columns).to eq(4)
     expect(board.cells).to eq(cells)
   end
+
 
 
 end
