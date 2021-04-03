@@ -28,10 +28,10 @@ class Board
     @cells[coordinate] != nil
   end
 
-  def correct_length?(ship, coordinates)
+  def valid_placement?(ship, coordinates)
     coordinates.length == ship.length
   end
-  
+
 end
 
 
