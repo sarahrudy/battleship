@@ -102,5 +102,35 @@ describe Board do
     expect(board.is_vertical?(cruiser, ["A1", "A2", "A3"])).to eq(false)
   end
 
-  it ''
+  it 'can place a ship' do
+    board = Board.new
+    cruiser = Ship.new("Cruiser", 3)
+    submarine = Ship.new("Submarine", 2)
+
+    board.place(cruiser, ["A1", "A2", "A3"])
+
+    cell_1 = board.cells["A1"]
+    cell_2 = board.cells["A2"]
+    cell_3 = board.cells["A3"]
+
+    expect(board.cells["A1"].render(true)).to eq("S")
+    expect(board.cells["A2"].render(true)).to eq("S")
+    expect(board.cells["A3"].render(true)).to eq("S")
+
+    expect(cell_1.ship).to be_instance_of(Ship)
+    expect(cell_2.ship).to be_instance_of(Ship)
+    expect(cell_3.ship).to be_instance_of(Ship)
+
+    expect(cell_3.ship).to eq(cell_2.ship)
+  end
+
+  it 'cannont place ships to overlap' do
+    board = Board.new
+    cruiser = Ship.new("Cruiser", 3)
+    submarine = Ship.new("Submarine", 2)
+
+    board.place(cruiser, ["A1", "A2", "A3"])
+
+    expect(board.valid_placement?(submarine, ["A1", "B1"])).to eq(false)
+  end
 end
