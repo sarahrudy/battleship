@@ -6,7 +6,6 @@ class Cell
   def initialize(coordinate)
     @coordinate     = coordinate
     @ship           = ship
-    # (name, length, health)
     @fired_upon     = false
   end
 
@@ -15,13 +14,12 @@ class Cell
   end
 
   def place_ship(ship_object)
-    @ship = ship_object
+    return false if empty? == false
+      @ship = ship_object
   end
 
   def fired_upon?
     @fired_upon
-    # empty, miss, hit, sunk
-    # check to see if it changed
   end
 
   def fire_upon
