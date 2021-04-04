@@ -31,10 +31,14 @@ describe Cell do
   it 'places a ship' do
     cell = Cell.new("B4")
     cruiser = Ship.new("Cruiser", 3)
+    submarine = Ship.new("Submarine", 2)
+
     cell.place_ship(cruiser)
 
     expect(cell.ship).to eq(cruiser)
     expect(cell.empty?).to eq(false)
+    cell.place_ship(submarine)
+    expect(cell.ship).to eq(cruiser)
   end
 
   it 'is fired upon' do
