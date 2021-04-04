@@ -40,7 +40,6 @@ class Board
       coordinate[0]
     end
     letters_check = letters.uniq.length == 1
-
     # size of ship will change
     numbers = coordinates.map do |coordinate|
       coordinate[1]
@@ -63,22 +62,21 @@ class Board
     letters_check = letters == range.to_a
     letters_check && numbers_check
   end
+
+  def overlap?(coordinates)
+    coordinates.all? do |coordinate|
+      @cells.key?(coordinate) && @cells[coordinate].empty?
+    end
+  end
 end
 
 
-
-
-
-
-
-
-    # @rows.each do |row|
-    #   @columns.each do |column|
-    #
-    #     range.each_cons(2) do
+  # def is_consecutive?(ship, coordinates)
+  #
+  # end
 
 # def valid_placement?(ship, coords)
-#
+  # board.place_ship
 # def player_input_valid?(ship, coords)
 
 
