@@ -13,9 +13,8 @@ class Cell
     @ship == nil
   end
 
-  def place_ship(ship_object)
-    return false if empty? == false
-      @ship = ship_object
+  def place_ship(ship)
+    @ship = ship
   end
 
   def fired_upon?
