@@ -30,7 +30,7 @@ class Board
   end
 
   def valid_placement?(ship, coordinates)
-    correct_length?(ship, coordinates) && is_horizontal?(ship, coordinates) || is_vertical?(ship, coordinates)
+    correct_length?(ship, coordinates) && is_horizontal?(ship, coordinates) || is_vertical?(ship, coordinates) && no_overlap?(coordinates)
   end
 
   def correct_length?(ship, coordinates)
@@ -59,10 +59,13 @@ class Board
     uniq_size?(coordinates, 1) && letters_check
   end
 
-  def place
+  def place(ship, coordinates)
+    coordinates.each do |coordinate|
+      @cells[coordinate].place_ship(ship)
+    end
   end
 
-  def overlap?(coordinates)
+  def no_overlap?(coordinates)
     coordinates.all? do |coordinate|
       @cells.key?(coordinate) && @cells[coordinate].empty?
     end
