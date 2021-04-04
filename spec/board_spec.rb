@@ -44,11 +44,10 @@ describe Board do
     expect(board.correct_length?(submarine, ["A1", "A2"])).to eq(true)
   end
 
- xit 'can pass all valid placement tests' do
+ it 'can pass all valid placement tests' do
       board = Board.new
       cruiser = Ship.new("Cruiser", 3)
       submarine = Ship.new("Submarine", 2)
-
       #correct length
       expect(board.valid_placement?(cruiser, ["A1", "A2"])).to eq(false)
       expect(board.valid_placement?(submarine, ["A2", "A3", "A4"])).to eq(false)
@@ -70,7 +69,6 @@ describe Board do
     #letter
     expect(board.split_coord(["A1", "A2"], 0)).to eq(["A", "A"])
     expect(board.split_coord(["A1", "B2"], 0)).to eq(["A", "B"])
-
     #number
     expect(board.split_coord(["A1", "A2"], 1)).to eq(["1", "2"])
     expect(board.split_coord(["A1", "B1"], 1)).to eq(["1", "1"])
@@ -81,11 +79,9 @@ describe Board do
     #letters
     expect(board.uniq_size?(["A1", "A2"], 0)).to eq(true)
     expect(board.uniq_size?(["A1", "B2"], 0)).to eq(false)
-
     #numbers
     expect(board.uniq_size?(["A1", "B1"], 1)).to eq(true)
     expect(board.uniq_size?(["A1", "A2"], 1)).to eq(false)
-
   end
 
   it 'is horizontal' do
@@ -106,32 +102,5 @@ describe Board do
     expect(board.is_vertical?(cruiser, ["A1", "A2", "A3"])).to eq(false)
   end
 
-  xit 'has consecutive coordinates' do
-    board = Board.new
-    cruiser = Ship.new("Cruiser", 3)
-    submarine = Ship.new("Submarine", 2)
-
-    expect(board.is_consecutive?(cruiser, ["A1", "A2", "A4"])).to eq(false)
-    # expect(board.is_consecutive?(submarine, ["A1","C1"])).to eq(false)
-    # expect(board.is_consecutive?(cruiser, ["A3", "A2", "A1"])).to eq(false)
-    # expect(board.is_consecutive?(submarine, ["C1", "B1"])).to eq(false)
-  end
+  it ''
 end
-
-  # xit 'cannot be diagonal' do
-  #   board = Board.new
-  #   cruiser = Ship.new("Cruiser", 3)
-  #   submarine = Ship.new("Submarine", 2)
-  #
-  #   expect(board.valid_placement?(cruiser, ["A1", "B2", "C3"])).to eq(false)
-  #   expect(board.valid_placement?(submarine, ["C2", "D3"])).to eq(false)
-  # end
-
-  # xit 'is valid placement if all previous checks pass' do
-  #   board = Board.new
-  #   cruiser = Ship.new("Cruiser", 3)
-  #   submarine = Ship.new("Submarine", 2)
-  #
-  #   expect(board.correct_length?(submarine, ["A1", "A2"])).to eq(true)
-  #   expect(board.correct_length?(cruiser, ["B1", "C1", "D1"])).to eq(true)
-  # end

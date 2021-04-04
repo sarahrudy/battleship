@@ -30,7 +30,7 @@ class Board
   end
 
   def valid_placement?(ship, coordinates)
-    correct_length?(ship, coordinates)
+    correct_length?(ship, coordinates) && is_horizontal?(ship, coordinates) || is_vertical?(ship, coordinates)
   end
 
   def correct_length?(ship, coordinates)
@@ -59,11 +59,7 @@ class Board
     uniq_size?(coordinates, 1) && letters_check
   end
 
-  def is_consecutive?(ship, coordinates)
-    coordinates.each_cons(2) do |coordinate|
-    coordinate
-    end
-
+  def place
   end
 
   def overlap?(coordinates)
@@ -72,42 +68,3 @@ class Board
     end
   end
 end
-
-
-
-# def valid_placement?(ship, coords)
-# board.place_ship
-# def player_input_valid?(ship, coords)
-
-
-# from Mike's slack message to group
-# def valid_placement?(ship, coords)
-#   player_input_valid?(ship, coords) &&
-#   (is_horizontal?(ship, coords) ||
-#   is_vertical?(ship, coords))
-# end
-
-#
-# def letters(coordinates)
-#   coordinates.map do |coordinate|
-#     coordinate[0]
-#   end
-# end
-#
-# def letters_check(coordinates)
-#   letters(coordinates).uniq.length == 1
-# end
-#
-# def numbers(coordinates)
-#   coordinates.map do |coordinate|
-#     coordinate[1]
-#   end
-# end
-#
-# def numbers_check(coordinates)
-#   numbers(coordinates) == ((coordinates[0])..(coordinates[-1])).to_a
-# end
-#
-# def is_horizontal?(ship, coordinates)
-#   letters_check(coordinates) && numbers_check(coordinates)
-# end
