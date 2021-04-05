@@ -133,4 +133,30 @@ describe Board do
 
     expect(board.valid_placement?(submarine, ["A1", "B1"])).to eq(false)
   end
+
+  it 'render default board' do
+     board = Board.new
+     board.render
+
+     expect(board.render).to eq"  1 2 3 4 \n" +
+                               "A . . . . \n" +
+                               "B . . . . \n" +
+                               "C . . . . \n" +
+                               "D . . . . \n"
+   end
+
+   it 'user can see their ship' do
+     board = Board.new
+     cruiser = Ship.new("Cruiser", 3)
+     submarine = Ship.new("Submarine", 2)
+     board.render
+
+     board.place(cruiser, ["A1", "A2", "A3"])
+
+     expect(board.render(true)).to eq"  1 2 3 4 \n" +
+                                     "A . . . . \n" +
+                                     "B . . . . \n" +
+                                     "C . . . . \n" +
+                                     "D . . . . \n"
+   end
 end

@@ -3,8 +3,6 @@ class Board
   attr_reader :cells
 
   def initialize
-    @columns = 1..4 # range class
-    @rows = "A".."D"
     @cells = {
       "A1" => Cell.new("A1"),
       "A2" => Cell.new("A2"),

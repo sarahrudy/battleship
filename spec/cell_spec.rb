@@ -68,7 +68,7 @@ describe Cell do
 
     expect(cell_2.render).to eq(".")
 
-    expect(cell_2.render(true)).to eq("S")
+    expect(cell_2.render(true)).to eq("S") 
 
     cell_2.fire_upon
 
@@ -83,6 +83,4 @@ describe Cell do
 
     expect(cell_2.render).to eq("X")
   end
-
-
 end
