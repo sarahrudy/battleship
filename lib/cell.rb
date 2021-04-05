@@ -6,6 +6,7 @@ class Cell
   def initialize(coordinate)
     @coordinate     = coordinate
     @ship           = ship
+  # @name, @length, @health
     @fired_upon     = false
   end
 
