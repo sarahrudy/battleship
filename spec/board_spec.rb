@@ -84,15 +84,6 @@ describe Board do
     expect(board.uniq_size?(["A1", "A2"], 1)).to eq(false)
   end
 
-  it 'is horizontal' do
-    board = Board.new
-    cruiser = Ship.new("Cruiser", 3)
-    submarine = Ship.new("Submarine", 2)
-
-    expect(board.is_horizontal?(submarine, ["A1", "A2"])).to eq(true)
-    expect(board.is_horizontal?(cruiser, ["A1", "B1", "C1"])).to eq(false)
-  end
-
   it 'is vertical' do
     board = Board.new
     cruiser = Ship.new("Cruiser", 3)
@@ -100,6 +91,15 @@ describe Board do
 
     expect(board.is_vertical?(submarine, ["A1", "B1"])).to eq(true)
     expect(board.is_vertical?(cruiser, ["A1", "A2", "A3"])).to eq(false)
+  end
+
+  it 'is horizontal' do
+    board = Board.new
+    cruiser = Ship.new("Cruiser", 3)
+    submarine = Ship.new("Submarine", 2)
+
+    expect(board.is_horizontal?(submarine, ["A1", "A2"])).to eq(true)
+    expect(board.is_horizontal?(cruiser, ["A1", "B1", "C1"])).to eq(false)
   end
 
   it 'can place a ship' do

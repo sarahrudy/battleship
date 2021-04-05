@@ -53,6 +53,15 @@ class Board
 # helper method to check if coordinates are horizontal or vertical below
   end
 
+  # letters
+  def is_vertical?(ship, coordinates)
+    range = split_coord(coordinates, 0)[0]..split_coord(coordinates, 0)[-1]
+    # splits the coordinates into letters and numbers, and grabs first element of array..to last element
+    letters_check = split_coord(coordinates, 0) == range.to_a
+    uniq_size?(coordinates, 1) && letters_check
+    # it will return a boolean value of true (vertical) if BOTH statements are true
+  end
+
 # numbers
   def is_horizontal?(ship, coordinates)
     range = split_coord(coordinates, 1)[0]..split_coord(coordinates, 1)[-1]
@@ -60,14 +69,6 @@ class Board
     uniq_size?(coordinates, 0) && numbers_check
     # it will return a boolean value of true (horizontal) if BOTH statements are true
     # require "pry"; binding.pry
-  end
-# letters
-  def is_vertical?(ship, coordinates)
-    range = split_coord(coordinates, 0)[0]..split_coord(coordinates, 0)[-1]
-    # splits the coordinates into letters and numbers, and grabs first element of array..to last element
-    letters_check = split_coord(coordinates, 0) == range.to_a
-    uniq_size?(coordinates, 1) && letters_check
-    # it will return a boolean value of true (vertical) if BOTH statements are true
   end
 
   def place(ship, coordinates)
