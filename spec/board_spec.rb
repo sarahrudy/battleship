@@ -146,10 +146,10 @@ describe Board do
     expect(board.render).to eq(blank_board)
   end
 
-  xit 'can render board with user cruiser' do
+  it 'can render board with user cruiser' do
     board = Board.new
     cruiser = Ship.new("Cruiser", 3)
-    user_board = "   1 2 3 4 \n" +
+    user_board = "  1 2 3 4 \n" +
                   "A S S S . \n" +
                   "B . . . . \n" +
                   "C . . . . \n" +
