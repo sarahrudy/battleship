@@ -47,16 +47,16 @@ class Board
     split_coord(coordinates, index).uniq.length == 1
   end
 
-  def is_horizontal?(ship, coordinates)
-    range = split_coord(coordinates, 1)[0]..split_coord(coordinates, 1)[-1]
-    numbers_check = split_coord(coordinates, 1) == range.to_a
-    uniq_size?(coordinates, 0) && numbers_check
-  end
-
   def is_vertical?(ship, coordinates)
     range = split_coord(coordinates, 0)[0]..split_coord(coordinates, 0)[-1]
     letters_check = split_coord(coordinates, 0) == range.to_a
     uniq_size?(coordinates, 1) && letters_check
+  end
+
+  def is_horizontal?(ship, coordinates)
+    range = split_coord(coordinates, 1)[0]..split_coord(coordinates, 1)[-1]
+    numbers_check = split_coord(coordinates, 1) == range.to_a
+    uniq_size?(coordinates, 0) && numbers_check
   end
 
   def place(ship, coordinates)
