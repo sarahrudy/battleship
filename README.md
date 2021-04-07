@@ -5,7 +5,7 @@
 To create an interactive game that includes tests along with a class file with methods that support them. We're driven by an eagerness to learn.
 
 **What is your collaboration style? How do you feel about pair programming vs. divide-and-conquer approaches?**<br/>
-Our collaboration style is ping-pong style. We'll both contribute in equal parts. Pair programming will allow us to have a better comprehension of our program and the inner workings of it. We are anti divide-and-conquer approach.
+Our collaboration style is ping-pong style. We'll both contribute in equal parts. Pair programming will allow us to have a better comprehension of our program and the inner workings of it. 
 
 **How do you communicate best? How do you appreciate receiving communication from others?**<br/>
 We are both direct and honest communicators which we believe will serve us well as we work through this project together. Luckily, we are similiar in that we give and receive direct and honest communication well. 
@@ -35,9 +35,7 @@ None. We'll communicate scheduling preferences as necessary.
 Constructive criticism mixed with positive feedback. 
 
 **What do you identify as being your biggest strength(s) (as a team) technically, as they relate to this project? Where do you feel you could use improvement in your technical skills, as they relate to this project? How can our team help support you in improving these skills?**<br/>
-We are great at reaching out for help early and often and utilizing online resources as we are relatively* inexperienced coders. We are working on learning the interactive phase of writing a program. Mitch and I are at a similar level so I think we will help support each other in the learning process. The Turing team can help support us on improving these skills by continuing to answer our questions and pointing us in the right direction for success. 
-
-*very
+We are great at reaching out for help early and often and utilizing online resources as we are relatively inexperienced coders. We are working on learning the interactive phase of writing a program. Mitch and I are at a similar level so I think we will help support each other in the learning process. The Turing team can help support us on improving these skills by continuing to answer our questions and pointing us in the right direction for success. 
 
 **What tools do you want to use to manage the project?**<br/>
 We will utilize google and past projects and assignments we've done in class as a tool to help manage the project.
@@ -49,7 +47,7 @@ We will brainstorm together, utilize google, cohort mates, tutor, and mentors to
 We'll know it is successful when both the journey and the outcome are teaching us to be better coders. We will achieve this as a group through overcoming hurdles together. 
 
 **How will we recognize each other's successes and celebrate them?**<br/>
-By taking small bitesize chunks and celebrating small wins as we move along through the project. High fives!
+By taking small bitesize chunks and celebrating small wins as we move along through the project.
 
 #**Remote Work Considerations During the COVID-19 Quarantine**#<br/>
 **What does remote focus look like for you? (headphones, distractions minimized (tv, family stuff, etc), video on)**<br/>
@@ -113,6 +111,5 @@ We will explore using GitHub projects. At surface level, it looks like it will b
 - Get some files and classes set up 
 - Set up rep.l
 - Write out general plan of attack
-- 
 
 **Additional Notes:**<br/>
