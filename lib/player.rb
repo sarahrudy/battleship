@@ -1,6 +1,8 @@
 class Player
+  attr_reader
 
   def initialize
-  end 
-
+    @AI_player  = AI_player
+    @RL_player  = RL_player
+  end
 end
