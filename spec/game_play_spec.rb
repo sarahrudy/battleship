@@ -19,14 +19,13 @@ describe GamePlay do
     game_play = GamePlay.new
     player_1 = AI_player
     player_2 = RL_player
-    blank_board = "  1 2 3 4 \n" +
+    expected = "  1 2 3 4 \n" +
                   "A . . . . \n" +
                   "B . . . . \n" +
                   "C . . . . \n" +
                   "D . . . . \n"
 
-    expect(board.render).to eq(blank_board)
-    expect(game_play.start_game).to eq(intro)
+    expect(board.render).to eq(expected)
   end
 
   it 'has player_2 place ships' do
@@ -42,43 +41,4 @@ describe GamePlay do
 
   it 'asks player_1 to place ships' do
 
-
-
-
-
 end
-
-
-# player 1 places cruiser and submarine in valid coordinates
-# render blank board
-# ask player 2 to place their ships
-
-
-#
-# welcome prompt
-# computer places ships
-# render user board and tell them to place ships
-# user places first ship
-# error_placement_message
-#     error msgs if not valid placement
-# render board with ship placement
-# user places second ship
-#
-# game begins with guessing
-#
-# user guess
-# computer guess
-#
-# feedback for both shots
-# error message if not valid coordinate or if it's already been fired_upon
-#
-# render boards with results from shots fired
-#
-# rinse repeat
-#
-# def error_placement_message
-# p "try again"
-# p "those coordinates do not work, try again"
-# end
-#
-# loop until you get a valid placement
