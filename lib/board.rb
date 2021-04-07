@@ -3,8 +3,6 @@ class Board
   attr_reader :cells
 
   def initialize
-    @columns = 1..4 # range class
-    @rows = "A".."D"
     @cells = {
       "A1" => Cell.new("A1"),
       "A2" => Cell.new("A2"),
@@ -73,9 +71,9 @@ class Board
 
   def render(value = nil)
     "  1 2 3 4 \n" +
-    "A " + @cells["A1"].render(value) + " " + @cells["A2"].render(value) + " " + @cells["A3"].render(value) + " " + @cells["A4"].render(value) + " " + "\n" +
-    "B " + @cells["B1"].render(value) + " " + @cells["B2"].render(value) + " " + @cells["B3"].render(value) + " " + @cells["B4"].render(value) + " " + "\n" +
-    "C " + @cells["C1"].render(value) + " " + @cells["C2"].render(value) + " " + @cells["C3"].render(value) + " " + @cells["C4"].render(value) + " " + "\n" +
-    "D " + @cells["D1"].render(value) + " " + @cells["D2"].render(value) + " " + @cells["D3"].render(value) + " " + @cells["D4"].render(value) + " " + "\n"
+    "A #{@cells["A1"].render(value)} #{@cells["A2"].render(value)} #{@cells["A3"].render(value)} #{@cells["A4"].render(value)} \n" +
+    "B #{@cells["B1"].render(value)} #{@cells["B2"].render(value)} #{@cells["B3"].render(value)} #{@cells["B4"].render(value)} \n" +
+    "C #{@cells["C1"].render(value)} #{@cells["C2"].render(value)} #{@cells["C3"].render(value)} #{@cells["C4"].render(value)} \n" +
+    "D #{@cells["D1"].render(value)} #{@cells["D2"].render(value)} #{@cells["D3"].render(value)} #{@cells["D4"].render(value)} \n"
   end
 end
